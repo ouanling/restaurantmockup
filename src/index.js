@@ -1,18 +1,8 @@
-
-
 import {createBody} from './body.js'
 import {createMenu} from './menu.js'
-var crotte = "crotterrr";
-console.log(crotte);
-
-createBody();
-createMenu();
-menuhome.setAttribute("onclick", "openPagez(event, 'home')");
-menumenu.setAttribute("onclick","openPagez(event, 'menu')");
-menucontainer.setAttribute("onclick", "openPagez(event, 'contact')");
-
 
 function openPage(evtz, pageNamez) {
+    return () => {
     var i, x, lesliens;
     x = document.getElementsByClassName("pages");
     for (i = 0; i < x.length; i++) {
@@ -23,6 +13,14 @@ function openPage(evtz, pageNamez) {
       lesliens[i].className = lesliens[i].className.replace(" menuchosen", "");
     }
     document.getElementById(pageNamez).style.display = "block";
-    evtz.currentTarget.className += " menuchosen";
+    evtz.className += " menuchosen";
   };
+}
 
+createBody(openPage);
+createMenu(openPage);
+
+
+
+
+  

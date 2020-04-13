@@ -1,5 +1,6 @@
 
-body {background: white;}
+body {background: white;
+overflow: hidden;}
 .bg {
     background-image: url('background.png');
     background-size: cover;
@@ -17,6 +18,7 @@ body {background: white;}
     width: 1000px;
     height: 400px;
     border: 2px solid #f0A500;
+    overflow: hidden;
    
     background-color: rgb(0,0,0,0.4);
   margin: auto;
@@ -41,6 +43,30 @@ body {background: white;}
     font-size: 40px;
     
  
+}
+.pagemenu {
+    grid-row: 2;
+    grid-column: 1 /3;
+    overflow-y: scroll;
+    scrollbar-color:  #f0a500 #dbdbdb;
+    scrollbar-width: thin;
+}
+.pagecontact {
+    grid-area: pagearearight;
+    font-family: 'Permanent Marker', cursive;
+    color: #dbdbdb;
+    font-size: 40px;
+}
+.food {
+    border: 2px solid  #f0a500;
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 170px;
+    width: 260px;
+    opacity: 0.8;
+}
+.food:hover {
+    opacity: 1;
 }
 .menucontainer {
     grid-area: menu;
