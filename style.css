@@ -1,4 +1,7 @@
 
+html {
+    -webkit-text-size-adjust: none; 
+}
 body {background: white;
 overflow: hidden;}
 .bg {
@@ -50,6 +53,20 @@ overflow: hidden;}
     overflow-y: scroll;
     scrollbar-color:  #f0a500 #dbdbdb;
     scrollbar-width: thin;
+   
+}
+.pagemenu::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+.pagemenu::-webkit-scrollbar-track-piece  {
+    background-color: #dbdbdb;
+}
+
+.pagemenu::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #f0a500;
 }
 .pagecontact {
     grid-area: pagearearight;
